@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             Fresh Food For All
         </title>
@@ -13,13 +15,19 @@
                        each list item should correspond to the menu items (Home, Register, Login, Help)
                        The css class of the menu is "navlist"
                        Check lecture slides about lists, an example of a more basic menu, and CSS class selector-->
-            <ul class="navlist">
-            </ul>
+           <ul class="navlist">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Register</a></li>
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Help</a></li>
+</ul>
          </nav>
         <main>
             <!-- Check Week 4 Lecture to learn about HTML5 semantic elements-->
             <aside>
-            </aside>
+               <input type="search" class="search"
+               placeholder="Search...">
+        </aside>
             <section>
                 <form class="center" novalidate>
                 <!-- ToDo: Implement the form containing 
@@ -33,13 +41,45 @@
                            and how to create a button that would react to a click Event
                         -->
                     <!-- Example given for user type checkboxes-->
+
+                     <label for="name">Name:</label>
+                     <br>
+                     <input type="text" id="name" name="name" required>
+                     <br><br>
+
+                     <label for="email">Email:</label>
+                     <br>
+                     <input type="email" id="email" name="email" required>
+                     <br><br>
+
+                     <label for="password">Password:</label>
+                     <br>
+                     <input type="password" id="password" name="password" required>
+                     <br><br>
+
+                     <label for="confirmPassword">Retype Password:</label>
+                     <br>
+                     <input type="password" id="confirmPassword" name="confirmPassword" required>
+                     <br><br>
                     
                     <input type="checkbox" id="buyer" name="buyer" value="buyer">
                     <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
                     <input type="checkbox" id="seller" name="seller" value="seller">
                     <label for="seller">I want to sell produce from my allotment.</label><br><br>
 
+                    <br>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">
+                    I agree to the
+                    <a href="#">Terms of Use</a>
+                    and
+                    <a href="#">Privacy Policy</a>.
+                    </label>
+
                     <br><br>
+
+                    <button type="submit">Register</button>
+                    <a href="#">Learn more</a>
                 </form>
                 <div class="center" id="hiddenSection">
                     <p id="hiddenParagraph"></p>
